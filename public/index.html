@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airbnb Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+</head>
+<body>
+    <header> 
+        <!-- Navbar -->
+        <div class="grid grid-cols-3 px-16 w-screen h-20 border-b-[1px] items-center fixed top-0 bg-white">
+            <img src="static/airbnb-logo.png" alt="" class="w-24 h-12"/>
+            <div class="flex items-center rounded-full shadow-md justify-evenly">
+                <button class="px-4 text-sm font-medium border-r-2">Anywhere</button>
+                <button class="px-4 text-sm font-medium border-r-2 ">Any week</button>
+                <button class="px-4 text-sm font-medium text-gray-500">Add Guests</button>
+                <i class="p-2 text-white bg-red-700 rounded-full fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="flex items-center justify-end gap-8">
+                <button class="px-4 text-sm font-medium">Airbnb your home</button>
+                <i class="fa-solid fa-globe"></i>
+                <div class="flex justify-evenly items-center rounded-full gap-2 border shadow-md h-10 w-20 py-1.25 pr-1.25 pl-2">
+                <i class="fa-solid fa-bars"></i>
+                <button class=" bg-black text-white rounded-full items-center h-8 w-8 text-[10px] font-semibold ">E</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category bar -->
+        <div class="fixed flex items-center h-24 space-x-10 bg-white top-16">
+            <div class="flex items-center justify-center space-x-12 ">
+                <div class="flex flex-col items-center gap-2 pl-16 text-gray-400 hover:text-black">
+                    <img src="/public/static/type1.jpeg" alt="" class="w-6 h-6"/>
+                    <p class="text-xs font-normal">Amazing pools</p>
+                </div>    
+                <div class="flex flex-col items-center gap-2 text-gray-400 hover:text-black">
+                    <img src="/public/static/type2.jpeg" alt="" class="w-6 h-6"/>
+                    <p class="text-xs font-normal">Farms</p>
+                </div>
+                <div class="flex flex-col items-center gap-2 text-gray-400 hover:text-black">
+                    <img src="/public/static/type3.jpeg" alt="" class="w-6 h-6"/>
+                    <p class="text-xs font-normal">Amazing views</p>
+                </div>
+                <div class="flex flex-col items-center gap-2 text-gray-400 hover:text-black">
+                    <img src="/public/static/type4.jpeg" alt="" class="w-6 h-6"/>
+                    <p class="text-xs font-normal">Cabins</p>
+                </div>
+                <div class="flex flex-col items-center gap-2 text-gray-400 hover:text-black">
+                    <img src="/public/static/type5.jpeg" alt="" class="w-6 h-6"/>
+                    <p class="text-xs font-normal">Golfing</p>
+                </div>    
+                <div class="flex flex-col items-center gap-2 text-gray-400 hover:text-black">
+                    <img src="/public/static/type6.jpeg" alt="" class="w-6 h-6"/>
+                    <p class="text-xs font-normal">Lakefront</p>
+                </div>
+                <div class="flex flex-col items-center gap-2 text-gray-400 hover:text-black">
+                    <img src="/public/static/type7.jpeg" alt="" class="w-6 h-6"/>
+                    <p class="text-xs font-normal">Rooms</p>
+                </div>
+                <div class="flex flex-col items-center gap-2 text-gray-400 hover:text-black">
+                    <img src="/public/static/type8.jpeg" alt="" class="w-6 h-6"/>
+                    <p class="text-xs font-normal">Beach front</p>
+                </div>
+                <div class="flex flex-col items-center gap-2 text-gray-400 hover:text-black">
+                    <img src="/public/static/type9.jpeg" alt="" class="w-6 h-6"/>
+                    <p class="text-xs font-normal">OMG!</p>
+                </div>
+                <div class="flex flex-col items-center gap-2 text-gray-400 hover:text-black">
+                    <img src="/public/static/type10.jpeg" alt="" class="w-6 h-6"/>
+                    <p class="text-xs font-normal">Countryside</p>
+                </div>
+                <div class="flex flex-col items-center gap-2 text-gray-400 hover:text-black">
+                    <img src="/public/static/type11.jpeg" alt="" class="w-6 h-6"/>
+                    <p class="text-xs font-normal">Tropical</p>
+                </div>
+                <div class="flex flex-col items-center gap-2 text-gray-400 hover:text-black">
+                    <img src="/public/static/type12.jpeg" alt="" class="w-6 h-6"/>
+                    <p class="text-xs font-normal">Tiny homes</p>
+                </div>
+
+            </div>
+            <span class="pl-4 material-symbols-outlined">arrow_circle_right</span>
+            <div class="flex items-center justify-around w-24 h-12 border shadow-sm rounded-xl">
+                <span class="material-symbols-outlined">tune</span>
+                <p class="pr-5 text-xs font-normal">Filters</p>
+                
+            </div>
+        </div>
+
+        <!-- Price class="text-grey" Bar -->
+        <div class="flex justify-center mt-48">
+            <div class="flex justify-between p-4 items-center border rounded-xl w-[600px] h-16">
+                <div class="flex justify-start space-x-5">
+                    <p class="pr-4 text-base font-medium border-r-2"> Display total price</p>
+                    <p class="pl-4 text-base font-medium text-gray-500">Includes all fees, before taxes</p>
+                </div>
+                <span class="material-symbols-outlined">toggle_off</span>
+
+            </div>
+        </div>
+    </header>
+
+    <main class="mx-16 mt-12">
+        <!-- Hotel info -->
+        <div class="grid grid-cols-4">
+            <div class="flex-col felx h-96 w-72">
+                <img src="static/img1.jpg" alt="" class="rounded-xl h-52 w-72"/>
+                <div class="flex justify-between m-2">
+                    <p class="text-sm font-medium ">Bamansure,India</p>
+                    <div class="flex">
+                        <i class="fa-solid fa-star"></i>
+                        <p class="text-sm font-medium ">New</p>
+                    </div>
+                </div>
+                <p class="text-sm font-medium text-gray-500">28 kilometers away</p>
+                <p class="text-sm font-medium text-gray-500">23-28 Jul</p>
+                <p class="mt-2">₹53,994 night</p>
+            </div>
+            <div class="flex-col felx h-96 w-72">
+                <img src="static/img2.jpg" alt="" class="rounded-xl h-52 w-72"/>
+                <div class="flex justify-between m-2">
+                    <p class="text-sm font-medium ">Bamansure,India</p>
+                    <div class="flex">
+                        <i class="fa-solid fa-star"></i>
+                        <p class="text-sm font-medium ">New</p>
+                    </div>
+                </div>
+                <p class="text-sm font-medium text-gray-500">28 kilometers away</p>
+                <p class="text-sm font-medium text-gray-500">23-28 Jul</p>
+                <p class="mt-2">₹53,994 night</p>
+            </div>
+            <div class="flex-col felx h-96 w-72">
+                <img src="static/img3.jpg" alt="" class="rounded-xl h-52 w-72"/>
+                <div class="flex justify-between m-2 ml-0">
+                    <p class="text-sm font-medium">Bamansure,India</p>
+                    <div class="flex">
+                        <i class="fa-solid fa-star"></i>
+                        <p class="text-sm font-medium ">New</p>
+                    </div>
+                </div>
+                <p class="text-sm font-medium text-gray-500">28 kilometers away</p>
+                <p class="text-sm font-medium text-gray-500">23-28 Jul</p>
+                <p class="mt-2">₹53,994 night</p>
+            </div>
+            <div class="flex-col felx h-96 w-72">
+                <img src="static/img4.jpg" alt="" class="rounded-xl h-52 w-72"/>
+                <div class="flex justify-between m-2 ">
+                    <p class="text-sm font-medium ">Bamansure,India</p>
+                    <div class="flex">
+                        <i class="fa-solid fa-star"></i>
+                        <p class="text-sm font-medium ">New</p>
+                    </div>
+                </div>
+                <p class="text-sm font-medium text-gray-500">28 kilometers away</p>
+                <p class="text-sm font-medium text-gray-500">23-28 Jul</p>
+                <p class="mt-2">₹53,994 night</p>
+            </div>
+            <div class=" felx h-96 w-72">
+                <img src="static/img1.jpg" alt="" class="rounded-xl h-52 w-72"/>
+                <div class="flex justify-between m-2 ">
+                    <p class="text-sm font-medium ">Bamansure,India</p>
+                    <div class="flex">
+                        <i class="fa-solid fa-star"></i>
+                        <p class="text-sm font-medium ">New</p>
+                    </div>
+                </div>
+                <p class="text-sm font-medium text-gray-500">28 kilometers away</p>
+                <p class="text-sm font-medium text-gray-500">23-28 Jul</p>
+                <p class="mt-2">₹53,994 night</p>
+            </div>
+            <div class="flex-col felx h-96 w-72">
+                <img src="static/img2.jpg" alt="" class="rounded-xl h-52 w-72"/>
+                <div class="flex justify-between m-2 ">
+                    <p class="text-sm font-medium ">Bamansure,India</p>
+                    <div class="flex">
+                        <i class="fa-solid fa-star"></i>
+                        <p class="text-sm font-medium ">New</p>
+                    </div>
+                </div>
+                <p class="text-sm font-medium text-gray-500">28 kilometers away</p>
+                <p class="text-sm font-medium text-gray-500">23-28 Jul</p>
+                <p class="mt-2">₹53,994 night</p>
+            </div>
+            <div class="flex-col felx h-96 w-72">
+                <img src="static/img3.jpg" alt="" class="rounded-xl h-52 w-72"/>
+                <div class="flex justify-between m-2 ">
+                    <p class="text-sm font-medium ">Bamansure,India</p>
+                    <div class="flex">
+                        <i class="fa-solid fa-star"></i>
+                        <p class="text-sm font-medium ">New</p>
+                    </div>
+                </div>
+                <p class="text-sm font-medium text-gray-500">28 kilometers away</p>
+                <p class="text-sm font-medium text-gray-500">23-28 Jul</p>
+                <p class="mt-2">₹53,994 night</p>
+            </div>
+            <div class="flex-col felx h-96 w-72">
+                <img src="static/img4.jpg" alt="" class="rounded-xl h-52 w-72"/>
+                <div class="flex justify-between m-2 ">
+                    <p class="text-sm font-medium ">Bamansure,India</p>
+                    <div class="flex">
+                        <i class="fa-solid fa-star"></i>
+                        <p class="text-sm font-medium ">New</p>
+                    </div>
+                </div>
+                <p class="text-sm font-medium text-gray-500">28 kilometers away</p>
+                <p class="text-sm font-medium text-gray-500">23-28 Jul</p>
+                <p class="mt-2">₹53,994 night</p>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="fixed bottom-0 flex justify-between w-screen p-2 bg-white">
+        <div class="flex ">
+            <p class="pr-1 text-xs font-medium">c</p>
+            <p class="pr-1 text-xs font-medium"> 2023 </p>
+            <p class="pr-1 text-xs font-medium"> Airbnb,Inc</p>
+            <p class="pr-1 text-xs font-medium"> . </p>
+            <p class="pr-1 text-xs font-medium">Privacy</p>
+            <p class="pr-1 text-xs font-medium"> . </p>
+            <p class="pr-1 text-xs font-medium">Terms</p>
+            <p class="pr-1 text-xs font-medium"> . </p>
+            <p class="pr-1 text-xs font-medium">Sitemap</p>
+            <p class="pr-1 text-xs font-medium"> . </p>
+            <p class="pr-1 text-xs font-medium">Company detials</p>
+            <p class="pr-1 text-xs font-medium"> . </p>
+            <p class="pr-1 text-xs font-medium">Destinations</p>
+        </div>
+        <div class="flex">
+            <i class="fa-solid fa-globe"></i>
+            <p class="pr-1 text-xs font-medium">English(In)</p>
+            <p class="pr-1 text-xs font-medium">₹INR</p>
+            <p class="pr-1 text-xs font-medium">Support & resources</p>
+        </div>
+
+    </footer>
+</body>
+</html>
